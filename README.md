@@ -1,2 +1,4 @@
-# udemy-gamedevtv-unity2d-block-breaker
-Block Breaker game when studying the Udemy "Complete C# Unity Game Developer 2D" Course.
+# Block Breaker
+
+### About
+Block Breaker is game done during the "Complete C# Unity Game Developer 2D" Udemy Course.
