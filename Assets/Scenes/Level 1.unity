@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 678534861}
   - component: {fileID: 678534863}
   - component: {fileID: 678534864}
+  - component: {fileID: 678534865}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -691,6 +692,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &678534865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678534860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c1077c9b9881e43a76d2e2f989cda6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenWidthInUnits: 16
 --- !u!1 &760932751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1061009026}
   - component: {fileID: 1061009025}
+  - component: {fileID: 1061009027}
   m_Layer: 0
   m_Name: Lose Collider
   m_TagString: Untagged
@@ -1202,6 +1217,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1061009027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061009024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a099fd75e4ae7e4d8e2c0c7b335d349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1157282996
 GameObject:
   m_ObjectHideFlags: 0
