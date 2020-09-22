@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
@@ -11,17 +8,22 @@ public class Ball : MonoBehaviour
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 15f;
     [SerializeField] AudioClip[] ballSounds; 
+    [SerializeField] float randomFactor = 0.2f;
 
     // state
     Vector2 paddleToBallVector;
-    bool hasStarted = false;
+    bool hasStarted = false; 
+
+    // references
     AudioSource audioSource;
+    Rigidbody2D myRigidBody2D;
 
     // Use this for initialization
     void Start()
     {
         paddleToBallVector = transform.position - paddle1.transform.position;
         audioSource = GetComponent<AudioSource>();
+        myRigidBody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -51,10 +53,12 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Vector2 velocityTweak = new Vector2(Random.Range(0, randomFactor), Random.Range(0, randomFactor));
         if (hasStarted)
         {
             AudioClip clip = ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)];
             audioSource.PlayOneShot(clip);
+            myRigidBody2D.velocity += velocityTweak;
         }
     }
 }
